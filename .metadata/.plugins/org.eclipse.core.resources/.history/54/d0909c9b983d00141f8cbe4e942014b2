@@ -1,0 +1,33 @@
+package pages;
+import javax.swing.*;
+
+import com.alee.laf.WebLookAndFeel;
+
+import java.awt.*;
+import java.awt.event.*;
+public class pageHub extends JFrame{
+	
+		JPanel contentPanel = new JPanel();
+		
+		JPanel comboBoxPane = new JPanel(); //use FlowLayout
+		String comboBoxItems[] = { "1", "2"};
+		JComboBox cb = new JComboBox(comboBoxItems);
+		cb.addItemListener(this);
+		
+		
+		public pageHub() {
+			contentPanel.setLayout(new CardLayout(0, 0));
+			getContentPane().add(comboBoxPane, BorderLayout.PAGE_START);
+			getContentPane().add(contentPanel, BorderLayout.CENTER);	
+			cb.setEditable(false);
+			
+			comboBoxPane.add(cb);
+		}
+		//Method came from the ItemListener class implementation,
+		//contains functionality to process the combo box item selecting
+	public void itemStateChanged(ItemEvent evt) {
+	    CardLayout cl = (CardLayout)(contentPanel.getLayout());
+	    cl.show(contentPanel, (String)evt.getItem());
+	}
+
+}

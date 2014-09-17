@@ -1,0 +1,36 @@
+package pages;
+import javax.swing.*;
+
+import org.openstreetmap.gui.jmapviewer.JMapViewer;
+
+import com.alee.laf.WebLookAndFeel;
+
+import java.awt.*;
+import java.awt.event.*;
+import java.awt.geom.Point2D;
+public class pageHub extends JFrame{
+	
+		JTabbedPane contentPanel = new JTabbedPane();
+		JPanel kartPane = new JPanel();
+		JPanel reservePane = new JPanel();
+		
+		
+		public pageHub() {
+			getContentPane().add(contentPanel);
+			contentPanel.add("Reserver",reservePane);
+			contentPanel.add("Kart",kartPane);
+			this.setSize(600, 500);
+			mapPane();
+		}
+		public void mapPane(){
+			JMapViewer mapPanel = new JMapViewer(); // just a JPanel extension, add to any swing/awt container
+			mapPanel.setZoom(8); // set some zoom level (1-18 are valid)
+			mapPanel.repaint(); // if already visible trigger a repaint here
+			
+			double lat = 63.13;
+			double lon = 10.43;
+			Point location = mapPanel.getMapPosition(lat, lon, false);
+			mapPanel.setDisplayPositionByLatLon(lat, lon, 8);
+			kartPane.add(mapPanel);
+		}
+}

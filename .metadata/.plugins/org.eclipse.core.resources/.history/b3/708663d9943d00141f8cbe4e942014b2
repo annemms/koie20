@@ -1,0 +1,10 @@
+package pages;
+import javax.swing.*;
+
+import com.alee.laf.WebLookAndFeel;
+
+import java.awt.*;
+
+public class pageHub {
+
+}
