@@ -3,6 +3,7 @@
 	<name>koie.ui</name>
 	<comment></comment>
 	<projects>
+		<project>koie.core</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

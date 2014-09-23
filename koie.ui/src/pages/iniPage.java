@@ -11,11 +11,12 @@ import java.io.IOException;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-
-public class iniPage extends JFrame{
-	public iniPage() {
+public class IniPage extends JFrame{
+	public IniPage() {
+		
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		JPanel contentPane = new JPanel();
+		
 		getContentPane().add(contentPane, BorderLayout.CENTER);
 		contentPane.setLayout(null);
 		
@@ -26,7 +27,7 @@ public class iniPage extends JFrame{
 					
 				}*/
 				disposeThis();
-				pageHub hub = new pageHub();
+				PageHub hub = new PageHub();
 				hub.show();
 			}
 		});
@@ -52,11 +53,7 @@ public class iniPage extends JFrame{
 		//myPicture = ImageIO.read(new File("../resources/koie_login.jpg"));
 		JLabel picLabel = new JLabel(new ImageIcon("C:\\Users\\admin\\git\\koie20\\koie.ui\\resources\\koie_login.jpg"));
 		imgPanel.add(picLabel);
-		
-
-		
-		
-		
+				
 	}	
 	public static void main(String[] args) {  
 		try {
@@ -74,7 +71,7 @@ public class iniPage extends JFrame{
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-		iniPage initer = new iniPage();
+		IniPage initer = new IniPage();
 		initer.show();
 		initer.setSize(400, 250);
 		initer.setResizable(false);
