@@ -6,6 +6,7 @@ import java.util.List;
 import pages.GUI;
 	
 public class Core {
+	//test
 
 	public String userEmail; // Vi trenger ingen brukerklasse før det viser 
 	public boolean isAdmin;	 // -> seg at disse to ikke er alt vi trenger.
